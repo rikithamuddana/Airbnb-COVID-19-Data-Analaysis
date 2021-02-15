@@ -37,11 +37,13 @@ Through this, we are looking to answer the following questions:
 As a note, because of the amount of code generated along with the current length of the report, exact codes for replication are included within the associated code files folder. All files are named respective to the section they cover in the report.
 
 **Data**
+
 AirBnB data was sourced from: http://insideairbnb.com/get-the-data.html
 For this project, datasets were used from the Calendar, Listings, and Reviews gz files scraped in October 2020. 
 Additional reviews and listings files were scraped from December 2020 as more information became available.
 
 Calendar Dataset
+
 The calendar dataset has 7 columns: listing_ID, date, available, price, adjested_price, minimum_nights, and maximum_nights. No columns are unique identifiers. Available is a binary category indicating whether a listing is available “t” or already booked “f”. No columns were removed from the calendar datasets before pre-processing. 
 
 The calendar data files display availability information per listing per day from the day of the scrape through one year into the future. Because of this, historical booking data was unavailable. As a proxy, Calendar gz files were taken every month from December of 2018 through October of 2020. Availability information was preserved solely from the date of scrape to the date before the following scrape, preventing duplicate data from being included inside the data frame as shown below:
