@@ -6,12 +6,19 @@
 3.	 EDA
 4.	 Assumptions
 5.	Covid in San Francisco
+
 **Market Supply**
+
 **Market Demand**
+
 **Revenue Analysis**
+
 **Exit Listings**
+
 **Text Mining**
 1.	Sentiment Analysis
-2.	Topic Modeling                                                                                    
+2.	Topic Modeling 
+
 **Conclusion**
+
 **Appendix**
