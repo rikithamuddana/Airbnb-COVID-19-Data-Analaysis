@@ -156,29 +156,42 @@ New cases per day
 
 ![](images/Picture8.png)
 
+
 Covid cases raisen to 200+ numbers per day since 1st December. Top 3 months with the highest number of cases recorded in a day are December(297), November(275), July(163). 
 
 SF Covid cases per month
 
 ![](images/Picture9.png)
+
+
 Joy plot above shows the distribution of covid cases per month in SF. July and November are the months with the highest number of cases. 
+
 ![](images/Picture10.png)
+
+
 Overall, total number covid cases crossed 18000 by the first week of december.  Better month in terms of the number of covid cases is May with the lowest number of cases of 880. The graph shows that covid cases are on the rise in the months of July(3262), November(3633) and December(by 10th dec- 2305).
 
 SF Covid Deaths per day
 
 ![](images/Picture11.png)
+
+
 Month of October recorded 5 deaths in a day. 
 
 Cumulative Covid Deaths - per month
 
 ![](images/Picture12.png)
+
+
 Overall, total number covid deaths crossed 160 by the first week of December. Covid deaths are high in September(31) followed by April(26) and October(26). The better month in terms of covid deaths is June, with 4 people lost lives to covid.
 
 Covid cases - Pairplot by month
 
 ![](images/Picture13.png)
+
 ![](images/Picture14.png)
+
+
 On average, number cases per day are high in the months of July, November and December.
 On average, the number of deaths are high in September(31) followed by October(26).
 
@@ -186,12 +199,16 @@ AirBnB Data Analysis
 
 SF hosts joining Airbnb and listings getting their first review in each month.
 
-![](images/Picture13.png)
+![](images/Picture15.png)
+
+
 As depicted in the graph, hosts joining airbnb have significantly dropped in the covid period. Which also indicates that new listings and that listings getting their first review is dropped as well. The last date any host joined Airbnb is on 2020-08-25.
 
 Monthly reviews per listing
 
-![](images/Picture14.png)
+![](images/Picture16.png)
+
+
 This graph shows the highest number of reviews any listing received in the respective months. As you can see, review data is divided into two sets - pre covid(till Feb2020) and covid(From Mar 2020) periods. This graph also shows that the highest number of reviews any listing received after covid is way below pre-covid period, which reiterates the negative impact of covid on the airbnb market. 
 
 Time Series Forecasting
@@ -205,13 +222,13 @@ Market supply was determined as the total number of listings per month, regardle
 
 The chart below shows the total number of listings by day, along with the projected number of listings by month for the next 180 days.
 
-![](images/Picture15.png)
+![](images/Picture17.png)
 
 In this chart, the black lines are our actuals, the blue line is the yhat value, and the light blue shaded areas are our 85% confidence interval. Surprisingly, we do not see a drop in the number of listings by month in our dataset. Instead, we see a fairly consistent trend upwards in terms of the number of Air BnB supply numbers.
 
 In order to determine if this trend was consistent across the board, the data was then subsetted by room type. 
 
-![](images/Picture16.png)   ![](images/Picture17.png)
+
 
 
 
