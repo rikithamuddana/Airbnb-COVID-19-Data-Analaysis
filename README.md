@@ -95,7 +95,6 @@ Upon preprocessing, new file has the following columns:
 Date, New_Cases, Cumulative_cases, New_Deaths, Cumulative_Deaths
 
 Final Datasets
-
 Calender_Merged was created by merging the calendar dataset with the selected columns from the Listings dataset by Listing_ID. Because the listings file was not spliced by month, all of the merged columns from that table are stagnant by date. The only columns that change over time are from the calendar dataset.
 
 ![](images/Picture3.png)
@@ -117,4 +116,106 @@ The correlation was done on the listings file and we could observe multicollinea
 ![](images/Picture6.png)
 
 From the has_availability column, we can observe that there were only listings that were available and not booked.
+
+![](images/Picture7.png)
+
+From the above EDA, we can observe that there were more listings that included Entire home/apt,  Private rooms and a few number of hotel rooms. This would be useful in explaining the effects Covid has on airbnb further.
+
+After careful analysis and EDA done on the listings file, we could come up with a few data preprocessing steps as follows:
+
+●	Calender_updated, neighbour_group_cleansed, bathrooms were dropped due to containing all missing values
+
+●	listing_url and host_url were dropped as we already have their respective ID columns 
+
+●	scrape_id was dropped due to being a constant
+
+●	last_scraped was dropped due to its insignificance to the model
+
+●	calendar_last_scraped was dropped as it is same as the last_scraped column
+
+●	maximum_maximum_nights, maximum_nights_avg_ntm were dropped as we already have maximum nights column
+
+●	minimum_minimum_nights, minimum_maximum_nights, minimum_nights_avg_ntm were dropped as we already have minimum nights column and would be redundant to include
+
+●	has_availability, availability_30, availability_60, availability_90, availability_365 were dropped as we already have availability by date
+
+**Assumptions**
+
+Because the calendar and listings datasets are forward-facing, a few assumptions needed to be made. These are as follows
+
+●	Booked rooms are indicative of room stays
+
+●	Reviews are indicative of room stays
+
+●	Exited listings can be defined as a listing which has not had a review in the past three months
+
+
+**Analysis - Covid in San Francisco**
+
+New cases per day
+
+![](images/Picture8.png)
+
+Covid cases raisen to 200+ numbers per day since 1st December. Top 3 months with the highest number of cases recorded in a day are December(297), November(275), July(163). 
+
+SF Covid cases per month
+
+![](images/Picture9.png)
+Joy plot above shows the distribution of covid cases per month in SF. July and November are the months with the highest number of cases. 
+![](images/Picture10.png)
+Overall, total number covid cases crossed 18000 by the first week of december.  Better month in terms of the number of covid cases is May with the lowest number of cases of 880. The graph shows that covid cases are on the rise in the months of July(3262), November(3633) and December(by 10th dec- 2305).
+
+SF Covid Deaths per day
+
+![](images/Picture11.png)
+Month of October recorded 5 deaths in a day. 
+
+Cumulative Covid Deaths - per month
+
+![](images/Picture12.png)
+Overall, total number covid deaths crossed 160 by the first week of December. Covid deaths are high in September(31) followed by April(26) and October(26). The better month in terms of covid deaths is June, with 4 people lost lives to covid.
+
+Covid cases - Pairplot by month
+
+![](images/Picture13.png)
+![](images/Picture14.png)
+On average, number cases per day are high in the months of July, November and December.
+On average, the number of deaths are high in September(31) followed by October(26).
+
+AirBnB Data Analysis
+
+SF hosts joining Airbnb and listings getting their first review in each month.
+
+![](images/Picture13.png)
+As depicted in the graph, hosts joining airbnb have significantly dropped in the covid period. Which also indicates that new listings and that listings getting their first review is dropped as well. The last date any host joined Airbnb is on 2020-08-25.
+
+Monthly reviews per listing
+
+![](images/Picture14.png)
+This graph shows the highest number of reviews any listing received in the respective months. As you can see, review data is divided into two sets - pre covid(till Feb2020) and covid(From Mar 2020) periods. This graph also shows that the highest number of reviews any listing received after covid is way below pre-covid period, which reiterates the negative impact of covid on the airbnb market. 
+
+Time Series Forecasting
+
+Time series forecasts were created by performing data aggregation by date to determine the daily number of listings along with the number booked. From here, the Facebook Prophet model was used to determine what can be expected moving forward for both the market demand and supply for the next 180 days.
+
+---
+## Market Supply
+
+Market supply was determined as the total number of listings per month, regardless of whether the availability was denoted as true or false. The underlying assumption for this is that if a listing is taken off of the market, it will no longer be shown within the dataset.
+
+The chart below shows the total number of listings by day, along with the projected number of listings by month for the next 180 days.
+
+![](images/Picture15.png)
+
+In this chart, the black lines are our actuals, the blue line is the yhat value, and the light blue shaded areas are our 85% confidence interval. Surprisingly, we do not see a drop in the number of listings by month in our dataset. Instead, we see a fairly consistent trend upwards in terms of the number of Air BnB supply numbers.
+
+In order to determine if this trend was consistent across the board, the data was then subsetted by room type. 
+
+![](images/Picture16.png)   ![](images/Picture17.png)
+
+
+
+
+
+
 
