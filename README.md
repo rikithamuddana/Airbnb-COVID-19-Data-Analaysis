@@ -288,6 +288,84 @@ Daily Percent of AirBnB’s booked by neighborhood
 
 Below are the four neighborhoods with the most listings. Unsurprisingly, listings in downtown have a lower percentage of bookings compared to pre-covid. However, most of the other neighborhoods follow a similar pattern to the overall trend of booking percentage being on the rise since about June 2020. It seems that while individuals are hesitant to book places to stay downtown, they are less likely to be wary of the nearby neighborhoods. 
 
+![](images/Picture35.png)
+
+![](images/Picture36.png)
+
+![](images/Picture37.png)
+
+![](images/Picture38.png)
+
+![](images/Picture39.png)
+
+![](images/Picture40.png)
+
+Additional charts for the number of bookings by day can be found in the appendix. However, they are not included as they do not provide any additional insight on the market supply and demand.
+
+ 
+Market Demand By Reviews
+
+In addition, market demand was also calculated by the number of reviews per month, as shown below:
+
+![](images/Picture41.png)
+
+From the number of reviews, there is a huge dip between March and June across the board. The reason this exists for this chart and not the bookings data is because the bookings data does not contain cancellations. This is in line with the San Francisco stay at home order, lasting from March 16 through May 31 2020. This is divided into room type below:
+
+![](images/Picture42.png)
+
+![](images/Picture43.png)
+
+![](images/Picture44.png)
+
+![](images/Picture45.png)
+
+Number of reviews for the private room and entire home/ apt have been on the rise since June 2020, with the entire home/ apt increasing at a faster rate. In contrast, shared room and hotel room have not recovered since Covid-19.
+After this, analysis was also conducted for the neighborhoods with the most reviews.
+
+
+![](images/Picture46.png)
+
+![](images/Picture47.png)
+
+![](images/Picture48.png)
+
+![](images/Picture49.png)
+
+![](images/Picture50.png)
+
+![](images/Picture51.png)
+
+All neighborhoods seem to have a steady increase in reviews since the lockdown order. However, neighborhoods away from downtown, such as Bernal Heights and Upper Market appear to be bouncing back quicker than downtown and nearby neighborhoods.
+
+ 
+Analyzing Revenue (Sales)
+
+To further explore the monthly revenue generated from the San Francisco market, we plotted the projected income generated from bookings for both the years 2019 and 2020. For this, we have used the merged dataset of both listings and calendar and calculated the monthly income from the price column.
+
+
+![](images/Picture52.png)
+
+![](images/Picture53.png)
+
+From the Revenue bar chart, it is visible that in 2019 the monthly revenue is gradually increasing from January and reaches maximum in the year end. Under normal circumstances, a similar trend would be seen for 2020 as well. But we could see that the year 2020 began very well in January making great revenue but started to decline from February followed by March and so on which could clearly be the impact of lockdowns that were announced during COVID 19. The sales/revenue again began to pick up slowly in the following months.
+
+From the above charts, an interesting observation that can be seen is that although overall bookings seem to have gone down, the income generated from bookings in the year 2020 are still higher when compared to 2019.  It is also important to note that the current dataset does not consider cancellations, something that inevitably occurred more often in 2020 than 2019 given the lockdown order from March through May.
+
+Given the projection of a positive increase in Air BnB revenue, we decided to explore the reason for this observation by looking into the revenue generated from different room types. This was conducted using the median rather than the mean due to a high discrepancy between a majority of the dataset and outliers.
+
+![](images/Picture54.png)
+
+![](images/Picture55.png)
+
+From the monthly average price plots of both 2019 and 2020, we can see that average prices are relatively consistent for the entire home/ apt, shared room, and private room. However, prices for hotel rooms have dropped significantly from 2019 to 2020 relative to the same time period. In order to get a closer look at the data, a graph was then created showing the difference in pricing for each room type for 2020 relative to 2019.
+
+![](images/Picture55.png)
+
+The above graph indicates that we notice a sizable difference in pricing right after the start of Covid. While the median price of a shared room had already been decreasing prior to April 2020, we see a decrease in pricing for all room types from April 2020 onwards.
+
+
+
+
 
 
 
